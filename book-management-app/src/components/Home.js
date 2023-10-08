@@ -7,7 +7,7 @@ function BookCarousel() {
 
   useEffect(() => {
     // Fetch book data from the external API when the component mounts
-    axios.get('YOUR_API_ENDPOINT')
+    axios.get('https://www.googleapis.com/books/v1/volumes?q={search_query}&key={api_key}&maxResults={max_results}')
       .then((response) => {
         // Assuming the API returns an array of book objects
         setBooks(response.data);
